@@ -187,6 +187,7 @@
 	<div class="show-hide-wrap"><button class="show-hide"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32"><path d="M22 16l-10.105-10.6-1.895 1.987 8.211 8.613-8.211 8.612 1.895 1.988 8.211-8.613z"></path></svg></button></div>
     </aside>
 <?php endif; ?>
+
 <?php if (akina_option('aplayer_server') != 'off'): ?>
     <div id="aplayer-float" style="z-index: 100;"
 	    class="aplayer"
@@ -233,11 +234,11 @@ jQuery(document).ready(function($) {
 
 <?php include_once("baidu_js_push.php") ?>
 
-	<!-- 增加图片放大效果		
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js-global/FancyZoom.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js-global/FancyZoomHTML.js"></script>-->
+	<!-- 增加图片放大效果>-->		
+	<!--<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js-global/FancyZoom.js"></script>-->
+<!--<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js-global/FancyZoomHTML.js"></script>-->
 
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Jabentwo/Ardye2@1.0/fancybox/jquery.fancybox.min.js"></script>
 
 </body>
 </html>

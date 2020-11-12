@@ -8987,6 +8987,26 @@ h1[id*=toc-head]::before,h2[id*=toc-head]::before,h3[id*=toc-head]::before,h4[id
     transform: scale(1.5,1); /* Standard syntax */
 }
 
+ /*侧边条*/
+.post-list-thumb:hover:after {
+    height: 100%;
+}
+.post-list-thumb:after {
+    content: '　';
+    width: 4px;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: 	#00FF40;/*颜色自己换*/
+    box-shadow: 0 0 6px #00FF40;
+    border-radius: 10px;
+    transition: 1s all;
+}
+.post-list-thumb-left:after{
+  right: 0;
+ left: auto;
+}
 
 	
 

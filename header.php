@@ -156,9 +156,8 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
 		    <div id="content" class="site-content">
 			
 	<!-- 增加图片放大效果		
-	<body onLoad="setupZoom();">
-	
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js-global/FancyZoom.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js-global/FancyZoomHTML.js"></script>-->
+	<body onLoad="setupZoom();">-->
+<!--<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js-global/FancyZoom.js"></script>-->
+<!--<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js-global/FancyZoomHTML.js"></script>-->
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jabentwo/Ardye2@1.0/fancybox/jquery.fancybox.min.css"/>
