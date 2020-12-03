@@ -5,7 +5,7 @@ Theme URI: https://github.com/mashirozx/Sakura/
 Author: Mashiro, Spirit, Louie, Fuzzz
 Author URI: http://2heng.xin
 Description: A wonderful branch of theme Akina
-Version: 3.3.8
+Version: 3.3.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: sakura
@@ -1064,9 +1064,10 @@ a:hover {
 .site-top .lower {
     position: relative;
     display: inline-block;
-    float: right;
-    margin: 15px 0 0 0;
-    font-size: 16px
+    margin: 15px 0 0 10px;
+    font-size: 16px;
+    left: -50%;
+    pointer-events: auto !important;
 }
 
 @media (max-width:860px) {
@@ -1145,12 +1146,12 @@ a:hover {
 
 @media(max-width:1200px) {
     .site-top .lower nav{
-        right: calc(-150px - 100%);
+        /*right: calc(-150px - 100%);这行注释适配IPadPro*/
         position: absolute;
-        float: right;
+        float: center;
         animation: searchbox .2s;
         min-width: 860px;
-        z-index: -1
+        z-index: -1;
     }
     .site-top .lower nav.navbar {
         right: calc(-50px - 100%);
@@ -1278,12 +1279,20 @@ a:hover {
     padding: 40px 0 0
 }
 
+.site-content.notransition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
+}
+
 .site-content {
     max-width: 800px;
     padding: 0 10px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #fff
+    background-color: rgba(255, 255, 255, .8)
 }
 
 .post-list {
@@ -1576,22 +1585,6 @@ i.iconfont.hotpost {
     overflow: hidden
 }
 
-.post-list-thumb-left .post-content-wrap {
-    float: left;
-    padding-left: 30px;
-    padding-right: 0;
-    text-align: right;
-    margin: 20px 10px 10px 0
-}
-
-.post-list-thumb-left .post-thumb {
-    float: left
-}
-
-.post-list-thumb-left .post-thumb a {
-    border-radius: 10px 0 0 10px
-}
-
 @media (max-width:768px) {
     .float-content p {
         height: auto;
@@ -1611,12 +1604,11 @@ i.iconfont.hotpost {
         width: 100%;
         left: 0
     }
-    .post-content-wrap,
-    .post-list-thumb-left .post-content-wrap {
-        text-align: left;
-        margin: 0;
-        padding: 20px;
-        float: none;
+    .post-list-thumb .post-content-wrap {
+        text-align: left !important;
+        margin: 0 !important;
+        padding: 20px !important;
+        float: none !important;
         box-shadow: none;
         border-top: 0
     }
@@ -3648,7 +3640,7 @@ a.page-numbers {
     font-size: 14px
 }
 
-.siren-checkbox-label input {
+.siren-checkbox-label input,#wp-comment-cookies-consent {
     padding: 0;
     margin: 0;
     float: none;
@@ -8826,187 +8818,25 @@ h1[id*=toc-head]::before,h2[id*=toc-head]::before,h3[id*=toc-head]::before,h4[id
     color: orange;
 }
 
-@-webkit-keyframes wave1/*Safari and Chrome*/
-{
-0% { left:-1500px;bottom:-5px}
-	50%{ left:0px;bottom:0px}
-	100%{ left:-1500px;bottom:-5px}
+/* 菜单栏居中 */
+.site-header.is-homepage .lower-cantiner {
+    display: none;
 }
- 
-@-webkit-keyframes wave2
-{
-0% { left:-1450px}
-	50%{ left:0px}
-	100%{left:-1450px}
- 
+.site-header.is-homepage.yya .lower-cantiner {
+    display: block;
 }
-@keyframes wave1/*Safari and Chrome*/
-{
-0% { left:-1500px;bottom:-5px}
-	50%{ left:0px;bottom:0px}
-	100%{ left:-1500px;bottom:-5px}
+.site-header:hover.is-homepage .lower-cantiner {
+    display: block;
 }
- 
-@keyframes wave2
-{
-0% { left:-1450px}
-	50%{ left:0px}
-	100%{left:-1450px}
- 
-}
-#banner_wave_1 {
-    width:auto;
-    height:65px;
-    background:url("https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/other/wave1.png") repeat-x;
-    _filter:alpha(opacity=80);
-    position:absolute;
-    bottom:0;
-    width:400%;
-    left:-236px;
-    z-index:5;
-    opacity:1;
-    transiton-property:opacity,bottom;
-    animation:wave1 90s infinite;
-    -webkit-animation:wave1 90s infinite;
-}
-#banner_wave_2 {
-    width:auto;
-    height:80px;
-    background:url("https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/other/wave2.png") repeat-x;
-    _filter:alpha(opacity=80);
-    position:absolute;
-    bottom:0;
-    width:400%;
-    left:0;
-    z-index:4;
-    opacity:1;
-    transiton-property:opacity,bottom;
-    animation:wave2 90s infinite;
-    -webkit-animation:wave2 90s infinite;
-}
-.banner_wave_hide,.banner_wave_hide_fit_skin {
-    opacity:0 !important;
-    bottom:-999px !important
-}
-@media(max-width:860px) {
-    #banner_wave_1,#banner_wave_2 {
-    display:inline-block;
-    
-}
-@-webkit-keyframes wave1/*Safari and Chrome*/
-{
-0% { left:-750px;bottom:-2px}
-	50%{ left:0px;bottom:0px}
-	100%{ left:-750px;bottom:-2px}
-}
- 
-@-webkit-keyframes wave2
-{
-0% { left:-750px}
-	50%{ left:0px}
-	100%{left:-750px}
- 
-}
-@keyframes wave1/*Safari and Chrome*/
-{
-0% { left:-750px;bottom:-2px}
-	50%{ left:0px;bottom:0px}
-	100%{ left:-750px;bottom:-2px}
-}
- 
-@keyframes wave2
-{
-0% { left:-750px}
-	50%{ left:0px}
-	100%{left:-750px}
- 
-}
-#banner_wave_1 {
-    width:auto;
-    height:65px;
-    background:url("https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/other/wave1.png") repeat-x;
-    _filter:alpha(opacity=80);
-    position:absolute;
-    bottom:0;
-    width:400%;
-    left:750px;
-    z-index:5;
-    opacity:1;
-    transiton-property:opacity,bottom;
-    animation:wave1 90s infinite;
-    -webkit-animation:wave1 60s infinite;
-}
-#banner_wave_2 {
-    width:auto;
-    height:80px;
-    background:url("https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/other/wave2.png") repeat-x;
-    _filter:alpha(opacity=80);
-    position:absolute;
-    bottom:0;
-    width:400%;
-    left:0;
-    z-index:4;
-    opacity:1;
-    transiton-property:opacity,bottom;
-    animation:wave2 90s infinite;
-    -webkit-animation:wave2 60s infinite;
- }
-}
-
-/* 首页下拉箭头样式*/
-.headertop-bar::after {
-    content: '';
-    width: 150%;
-    height: 4.375rem;
-    background: #fff;
-    left: -25%;
-    bottom: -2.875rem;
-    border-radius: 100%;
+.site-top .lower-cantiner {
     position: absolute;
-    z-index: 4;
-}
- 
-.headertop-down {
-    position: absolute;
-    bottom: 50px;
     left: 50%;
-    cursor: pointer;
-    z-index: 5;
+    min-width: 758.4px;
+    pointer-events: none;
 }
-@media (max-width: 860px) {
-    .headertop-down {
-        display: none
-    }
+#show-nav.mobile-fit {
+    position: fixed !important;
+    right: 120px;
+    opacity: 0;
+    pointer-events: none;
 }
- 
-.headertop-down i {
-    font-size: 28px;
-    color: #fff;
-    -ms-transform: scale(1.5,1); /* IE 9 */
-    -webkit-transform: scale(1.5,1); /* Safari */
-    transform: scale(1.5,1); /* Standard syntax */
-}
-
- /*侧边条*/
-.post-list-thumb:hover:after {
-    height: 100%;
-}
-.post-list-thumb:after {
-    content: '　';
-    width: 4px;
-    height: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: 	#00FF40;/*颜色自己换*/
-    box-shadow: 0 0 6px #00FF40;
-    border-radius: 10px;
-    transition: 1s all;
-}
-.post-list-thumb-left:after{
-  right: 0;
- left: auto;
-}
-
-	
-

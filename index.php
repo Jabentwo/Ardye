@@ -41,7 +41,7 @@ get_header();
 	
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">	
-		<h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;"><i class="fa fa-envira" aria-hidden="true"></i> 客官别走</h1>
+		<h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;"><i class="fa fa-envira" aria-hidden="true"></i> Discovery</h1>
 		<?php
 		if ( have_posts() ) :
 

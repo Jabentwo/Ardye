@@ -137,5 +137,3 @@
 </figure>
 <?php
 echo bgvideo(); //BGVideo 
-?>
-<div class="headertop-down faa-float animated" onclick="headertop_down()"><span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></div>
